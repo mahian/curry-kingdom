@@ -10,7 +10,7 @@ const Hero = () => {
             <p class="mb-8 leading-relaxed">SMOKED BRISKET, TENDER RIBS, SMOKED SAUSAGE, BACON & CHEDDAR WITH LETTUCE, TOMATO, HOUSE BBQ & RANCH.</p>
             <div class="flex w-full md:justify-start justify-center items-end">
               <div class="relative mr-4 md:w-full lg:w-full xl:w-1/2 w-2/4">
-                <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:ring-2 focus:ring-primary-hover focus:bg-transparent focus:border-primary text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                <input type="text" id="hero-field" name="hero-field" class="w-full bg-gray-100 rounded border bg-opacity-50 border-gray-300 focus:bg-transparent focus:border-primary text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
               </div>
               <button class="inline-flex text-white bg-primary border-0 py-2 px-6 focus:outline-none hover:bg-primary-hover rounded text-lg">Button</button>
             </div>

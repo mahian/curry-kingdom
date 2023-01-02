@@ -1,56 +1,100 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Nav = () => {
+    const [open, setOpen] = useState(false);
+    const navbarCollaps = ()=>{
+        if(!open){
+            setOpen(true)
+        }else{
+            setOpen(false)
+        }
+    }
     return (
         <div>
-            <nav class="border-gray-200">
-                <div class="container mx-auto flex flex-wrap items-center justify-between py-5 px-3">
-                    <Link to="/" class="flex">
-                        <img class="h-10" src="assets/logo.png" alt="" />
-                    </Link>
-                    <button data-collapse-toggle="mobile-menu" type="button" class="md:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            <nav className=" container mx-auto relative px-4 py-4 flex justify-between items-center bg-white">
+                <Link className="text-3xl font-bold leading-none" to="/">
+                    <img class="h-20" src="assets/logo.png" alt="" />
+                </Link>
+                <div className="lg:hidden">
+                    <button onClick={navbarCollaps} className="navbar-burger flex items-center text-primary p-3">
+                        <svg className="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                        </svg>
                     </button>
-                    <div class="hidden md:block w-full md:w-auto" id="mobile-menu">
-                        <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
-                            <li>
-                                <Link to="/" class="bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded focus:outline-none" aria-current="page">Home</Link>
+                </div>
+                <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+                    <li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Home</a></li>
+                    <li className="text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                        </svg>
+                    </li>
+                    <li><a className="text-sm text-primary font-bold" href="#">About Us</a></li>
+                    <li className="text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                        </svg>
+                    </li>
+                    <li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Services</a></li>
+                    <li className="text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                        </svg>
+                    </li>
+                    <li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Pricing</a></li>
+                    <li className="text-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" className="w-4 h-4 current-fill" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                        </svg>
+                    </li>
+                    <li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Contact</a></li>
+                </ul>
+                <a className="hidden lg:inline-block lg:ml-auto lg:mr-3 py-2 px-6 bg-gray-50 hover:bg-gray-100 text-sm text-gray-900 font-bold  rounded-xl transition duration-200" href="#">Sign In</a>
+                <a className="hidden lg:inline-block py-2 px-6 bg-primary-hover hover:bg-primary text-sm text-white font-bold rounded-xl transition duration-200" href="#">Sign up</a>
+            </nav>
+            <div className={`navbar-menu relative z-50 ${open? 'block': 'hidden'}`}>
+                <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+                <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+                    <div className="flex items-center mb-8">
+                        <a className="mr-auto text-3xl font-bold leading-none" href="#">
+                            <svg className="h-12" alt="logo" viewBox="0 0 100 100">
+                                <path d="M100 34.2c-.4-2.6-3.3-4-5.3-5.3-3.6-2.4-7.1-4.7-10.7-7.1-8.5-5.7-17.1-11.4-25.6-17.1-2-1.3-4-2.7-6-4-1.4-1-3.3-1-4.8 0-5.7 3.8-11.5 7.7-17.2 11.5L5.2 29C3 30.4.1 31.8 0 34.8c-.1 3.3 0 6.7 0 10v16c0 2.9-.6 6.3 2.1 8.1 6.4 4.4 12.9 8.6 19.4 12.9 8 5.3 16 10.7 24 16 2.2 1.5 4.4 3.1 7.1 1.3 2.3-1.5 4.5-3 6.8-4.5 8.9-5.9 17.8-11.9 26.7-17.8l9.9-6.6c.6-.4 1.3-.8 1.9-1.3 1.4-1 2-2.4 2-4.1V37.3c.1-1.1.2-2.1.1-3.1 0-.1 0 .2 0 0zM54.3 12.3L88 34.8 73 44.9 54.3 32.4V12.3zm-8.6 0v20L27.1 44.8 12 34.8l33.7-22.5zM8.6 42.8L19.3 50 8.6 57.2V42.8zm37.1 44.9L12 65.2l15-10.1 18.6 12.5v20.1zM50 60.2L34.8 50 50 39.8 65.2 50 50 60.2zm4.3 27.5v-20l18.6-12.5 15 10.1-33.6 22.4zm37.1-30.5L80.7 50l10.8-7.2-.1 14.4z"></path>
+                            </svg>
+                        </a>
+                        <button onClick={navbarCollaps} className="navbar-close">
+                            <svg className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <ul>
+                            <li className="mb-1">
+                                <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-primary rounded" href="#">Home</a>
                             </li>
-                            <li>
-                                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Dropdown <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
-                                <div id="dropdownNavbar" class="absolute hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
-                                    <ul class="py-1" aria-labelledby="dropdownLargeButton">
-                                        <li>
-                                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Dashboard</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Settings</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Earnings</a>
-                                        </li>
-                                    </ul>
-                                    <div class="py-1">
-                                        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign out</a>
-                                    </div>
-                                </div>
+                            <li className="mb-1">
+                                <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-primary rounded" href="#">About Us</a>
                             </li>
-                            <li>
-                                <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Services</a>
+                            <li className="mb-1">
+                                <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-primary rounded" href="#">Services</a>
                             </li>
-                            <li>
-                                <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Pricing</a>
+                            <li className="mb-1">
+                                <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-primary rounded" href="#">Pricing</a>
                             </li>
-                            <li>
-                                <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Contact</a>
+                            <li className="mb-1">
+                                <a className="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-primary rounded" href="#">Contact</a>
                             </li>
                         </ul>
                     </div>
-                </div>
-            </nav>
+                    <div className="mt-auto">
+                        <div className="pt-6">
+                            <a className="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl" href="#">Sign in</a>
+                            <a className="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-primary hover:bg-blue-700  rounded-xl" href="#">Sign Up</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </div>
     );
 };
