@@ -1,0 +1,12 @@
+/* services card design */
+.service_card{
+    cursor: pointer;
+}
+.service_card:hover{
+    background-color: #ed1c24;
+    color: white;
+}
+
+.service_card:hover .icon, .service_card:hover h2{
+    color: white;
+}
