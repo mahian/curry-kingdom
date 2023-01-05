@@ -13,7 +13,7 @@ const Services = () => {
                         <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">Master Cleanse Reliac Heirloom</h1>
                     </div> */}
                     <div className="flex flex-wrap -m-4">
-                        <div className="p-4 md:w-1/3 ">
+                        <div className="p-4 md:w-1/3 " data-aos="flip-down">
                             <div className="flex rounded-lg h-full p-8 flex-col shadow-lg service_card">
                                 <div className="mb-3">
                                     <div className="text-primary icon">
@@ -26,7 +26,7 @@ const Services = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="p-4 md:w-1/3 ">
+                        <div className="p-4 md:w-1/3 " data-aos="flip-down">
                             <div className="flex rounded-lg h-full p-8 flex-col shadow-lg service_card">
                                 <div className="mb-3">
                                     <div className="text-primary icon">
@@ -39,7 +39,7 @@ const Services = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="p-4 md:w-1/3 ">
+                        <div className="p-4 md:w-1/3 " data-aos="flip-down">
                             <div className="flex rounded-lg h-full p-8 flex-col shadow-lg service_card">
                                 <div className="mb-3">
                                     <div className="text-primary icon">

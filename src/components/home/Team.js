@@ -9,7 +9,7 @@ const Team = () => {
                         <h1 className="text-2xl font-medium title-font mb-4 text-gray-900">OUR TEAM</h1>
                     </div>
                     <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-10 -m-4">
-                        <div className="p-4 shadow-xl w-full">
+                        <div className="p-4 shadow-xl w-full" data-aos="flip-down">
                             <div className="h-full flex flex-col items-center text-center">
                                 <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="assets/cheaf1.jpg" />
                                 <div className="w-full">
@@ -34,7 +34,7 @@ const Team = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="p-4 w-full shadow-xl">
+                        <div className="p-4 w-full shadow-xl" data-aos="flip-down">
                             <div className="h-full flex flex-col items-center text-center">
                                 <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="assets/cheaf2.jpg" />
                                 <div className="w-full">
@@ -59,7 +59,7 @@ const Team = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="p-4 w-full shadow-xl">
+                        <div className="p-4 w-full shadow-xl" data-aos="flip-down">
                             <div className="h-full flex flex-col items-center text-center">
                                 <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="assets/cheaf3.jpg" />
                                 <div className="w-full">
@@ -84,7 +84,7 @@ const Team = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="p-4 w-full shadow-xl">
+                        <div className="p-4 w-full shadow-xl" data-aos="flip-down">
                             <div className="h-full flex flex-col items-center text-center">
                                 <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="assets/cheaf4.jpg" />
                                 <div className="w-full">

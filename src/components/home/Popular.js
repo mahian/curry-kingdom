@@ -37,7 +37,7 @@ const Popular = () => {
                         <h1 className="sm:text-3xl text-2xl font-medium title-font text-gray-900">Master Cleanse Reliac Heirloom</h1>
                     </div>
                     <div className="grid md:grid-cols-3 gap-10 sm:-m-4 -mx-4 -mb-10 -mt-4">
-                        <div className="p-4 w-full sm:mb-0 mb-6 rounded-lg bg-white shadow-xl">
+                        <div className="p-4 w-full sm:mb-0 mb-6 rounded-lg bg-white shadow-xl" data-aos="zoom-in">
                             <div className="rounded-lg h-64 overflow-hidden">
                                 <img alt="content" className="object-cover object-center h-full w-full" src={data1.strMealThumb} />
                             </div>
@@ -58,7 +58,7 @@ const Popular = () => {
                                 </svg>
                             </Link>
                         </div>
-                        <div className="p-4 w-full sm:mb-0 mb-6 rounded-lg bg-white shadow-xl">
+                        <div className="p-4 w-full sm:mb-0 mb-6 rounded-lg bg-white shadow-xl" data-aos="zoom-in">
                             <div className="rounded-lg h-64 overflow-hidden">
                                 <img alt="content" className="object-cover object-center h-full w-full" src={data2.strMealThumb} />
                             </div>
@@ -79,7 +79,7 @@ const Popular = () => {
                                 </svg>
                             </Link>
                         </div>
-                        <div className="p-4 w-full sm:mb-0 mb-6 rounded-lg bg-white shadow-xl">
+                        <div className="p-4 w-full sm:mb-0 mb-6 rounded-lg bg-white shadow-xl" data-aos="zoom-in">
                             <div className="rounded-lg h-64 overflow-hidden">
                                 <img alt="content" className="object-cover object-center h-full w-full" src={data3.strMealThumb} />
                             </div>

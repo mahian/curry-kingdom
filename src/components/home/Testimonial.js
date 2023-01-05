@@ -1,4 +1,3 @@
-import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -7,10 +6,10 @@ import { Navigation, Pagination } from "swiper";
 const Testimonial = () => {
     return (
         <div>
-            <section className="bg-gray-100">
+            <section className="bg-gray-100 overflow-hidden">
                 <div className="mx-auto max-w-[1340px] px-4 py-16 sm:px-6 sm:py-24 lg:mr-0 lg:pl-8 lg:pr-0">
                     <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16">
-                        <div className="max-w-xl text-center sm:text-left">
+                        <div className="max-w-xl text-center sm:text-left" data-aos="fade-right">
                             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
                                 Don't just take our word for it...
                                 <br className="hidden sm:block lg:hidden" />
@@ -57,7 +56,7 @@ const Testimonial = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="-mx-6 lg:col-span-2 lg:mx-0">
+                        <div className="-mx-6 lg:col-span-2 lg:mx-0" data-aos="fade-left">
                             <div className="swiper-container !overflow-hidden">
                                 <Swiper navigation={{
                                     nextEl: '.next-button',

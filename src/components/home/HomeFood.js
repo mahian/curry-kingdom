@@ -25,7 +25,7 @@ const HomeFood = () => {
                     </div>
                     <div className="flex flex-wrap -m-4">
                         {
-                            LimitFood.map(food => <div className="lg:w-1/4 md:w-1/2 p-4 w-full">
+                            LimitFood.map(food => <div className="lg:w-1/4 md:w-1/2 p-4 w-full" data-aos="zoom-in">
                             <div className="block relative h-48 rounded overflow-hidden">
                                 <img alt="ecommerce" className="object-cover object-center w-full h-full block" src={food.strMealThumb} />
                             </div>
